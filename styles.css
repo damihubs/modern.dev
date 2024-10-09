@@ -3,7 +3,8 @@
     --color-secondary: #d367c1;
     --color-background: #27272c;
     --color-on-background: #c5c5ce;
-    --gradient: linear-gradient(to right, #d367c1 10%, #dedf40 25%, #62cb5c 50%, #00bbcb 75%, #ab79d6 90%);
+    --color-gradient: linear-gradient(to right, #d367c1, #dedf40, #62cb5c, #00bbcb, #ab79d6);
+    --highlight-gradient: linear-gradient(to right, #d367c1, #00bbcb);
     --brand-font: 'Kanit', serif;
     --brand-font-alt: 'Baloo 2', sans-serif;
 }
@@ -12,26 +13,55 @@ body {
     background-color: var(--color-background);
     color: var(--color-on-background);
     font-family: var(--brand-font-alt);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-header {
+.hero {
     text-align: center;
     padding: 20px;
-    background: var(--gradient);
+    background: var(--color-gradient);
     color: var(--color-on-background);
     font-family: var(--brand-font);
     font-weight: 800;
 }
 
-h1 {
-    color: var(--color-primary);
+.highlight-title {
+    background: var(--highlight-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-em {
-    color: var(--color-secondary);
+.byline {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.promo {
+    text-align: center;
+    background-color: #1e1c22;
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px solid transparent;
+    border-image: var(--color-gradient) 1;
 }
 
 footer {
@@ -39,4 +69,5 @@ footer {
     color: var(--color-on-background);
     padding: 10px;
     text-align: center;
+    margin-top: auto;
 }
