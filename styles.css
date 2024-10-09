@@ -1,0 +1,42 @@
+:root {
+    --color-primary: #ab79d6;
+    --color-secondary: #d367c1;
+    --color-background: #27272c;
+    --color-on-background: #c5c5ce;
+    --gradient: linear-gradient(to right, #d367c1 10%, #dedf40 25%, #62cb5c 50%, #00bbcb 75%, #ab79d6 90%);
+    --brand-font: 'Kanit', serif;
+    --brand-font-alt: 'Baloo 2', sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--brand-font-alt);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: var(--gradient);
+    color: var(--color-on-background);
+    font-family: var(--brand-font);
+    font-weight: 800;
+}
+
+h1 {
+    color: var(--color-primary);
+}
+
+em {
+    color: var(--color-secondary);
+}
+
+footer {
+    background-color: #1e1c22;
+    color: var(--color-on-background);
+    padding: 10px;
+    text-align: center;
+}
